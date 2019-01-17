@@ -8,6 +8,7 @@
     $pass = '';
     $conn = new PDO("mysql:host=localhost;dbname=spelshit",$username, $pass);
 
+    // No longer needed since I created a proper view for each game
     /*
     if(!array_key_exists('matches', $_GET)) {
         // Empty the table, for testing sake.
@@ -39,6 +40,7 @@
                 <a href='index.php'>Index</a>
                 <a href='matches.php'>Matches</a>
                 <a href='wedstrijden.php'>Wedstrijden</a>
+                <a href='user.php'>User</a>
             </nav>
             <form method='post'>
                 <select name='amount'>

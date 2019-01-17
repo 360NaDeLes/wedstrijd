@@ -10,11 +10,12 @@
     $sth = $conn->prepare("SELECT DISTINCT wedstrijd FROM `matches`");
     $sth->execute();
     $results = $sth->fetchAll(PDO::FETCH_ASSOC);
-    print_r($results);
+    
     $HTML = "<nav>
                 <a href='index.php'>Index</a>
                 <a href='matches.php'>Matches</a>
                 <a href='wedstrijden.php'>Wedstrijden</a>
+                <a href='user.php'>User</a>
             </nav>";
 
     foreach($results as $result) {
