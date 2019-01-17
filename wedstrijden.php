@@ -20,7 +20,7 @@
 
     foreach($results as $result) {
         foreach($result as $value) {
-            $HTML .= "<a href=\"matches.php?wedstrijd=$value\">Wedstrijd $value</a><br />";
+            $HTML .= "<a href=\"matches.php?wedstrijd=$value&ronde=1\">Wedstrijd $value</a><br />";
         }
     }
     echo $HTML;
