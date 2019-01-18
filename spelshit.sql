@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 17 jan 2019 om 16:48
--- Serverversie: 10.1.35-MariaDB
--- PHP-versie: 7.2.9
+-- Gegenereerd op: 18 jan 2019 om 17:06
+-- Serverversie: 10.1.37-MariaDB
+-- PHP-versie: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -89,7 +89,7 @@ CREATE TABLE `matches` (
   `ronde` int(11) NOT NULL,
   `author_1` int(11) NOT NULL,
   `author_2` int(11) NOT NULL,
-  `winner` int(11) NOT NULL
+  `winner` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -97,62 +97,52 @@ CREATE TABLE `matches` (
 --
 
 INSERT INTO `matches` (`matchid`, `wedstrijd`, `ronde`, `author_1`, `author_2`, `winner`) VALUES
-(1, 1, 1, 22, 6, 0),
-(2, 1, 1, 14, 25, 0),
-(3, 1, 1, 13, 26, 0),
-(4, 1, 1, 20, 21, 0),
-(5, 1, 1, 8, 5, 0),
-(6, 1, 1, 19, 11, 0),
-(7, 1, 1, 29, 17, 0),
-(8, 1, 1, 32, 9, 0),
-(9, 1, 1, 16, 27, 0),
-(10, 1, 1, 7, 30, 0),
-(11, 1, 1, 28, 4, 0),
-(12, 1, 1, 31, 12, 0),
-(13, 1, 1, 23, 2, 0),
-(14, 1, 1, 15, 1, 0),
-(15, 1, 1, 18, 3, 0),
-(16, 1, 1, 24, 10, 0),
-(17, 2, 1, 26, 10, 0),
-(18, 2, 1, 22, 21, 0),
-(19, 2, 1, 7, 4, 0),
-(20, 2, 1, 18, 6, 0),
-(21, 2, 1, 32, 8, 0),
-(22, 2, 1, 28, 29, 0),
-(23, 2, 1, 19, 30, 0),
-(24, 2, 1, 20, 14, 0),
-(25, 2, 1, 24, 25, 0),
-(26, 2, 1, 23, 5, 0),
-(27, 2, 1, 15, 31, 0),
-(28, 2, 1, 13, 1, 0),
-(29, 2, 1, 12, 2, 0),
-(30, 2, 1, 16, 9, 0),
-(31, 2, 1, 27, 3, 0),
-(32, 2, 1, 11, 17, 0),
-(33, 3, 1, 6, 26, 0),
-(34, 3, 1, 16, 9, 0),
-(35, 3, 1, 17, 22, 0),
-(36, 3, 1, 2, 4, 0),
-(37, 3, 1, 28, 20, 0),
-(38, 3, 1, 1, 24, 0),
-(39, 3, 1, 5, 33, 0),
-(40, 3, 1, 3, 12, 0),
-(41, 3, 1, 27, 29, 0),
-(42, 3, 1, 31, 23, 0),
-(43, 3, 1, 8, 13, 0),
-(44, 3, 1, 34, 32, 0),
-(45, 3, 1, 15, 30, 0),
-(46, 3, 1, 25, 19, 0),
-(47, 3, 1, 18, 10, 0),
-(48, 3, 1, 11, 21, 0),
-(49, 4, 1, 10, 4, 0),
-(50, 4, 1, 29, 3, 0),
-(51, 4, 1, 14, 2, 0),
-(52, 4, 1, 5, 33, 0),
-(53, 4, 1, 27, 1, 0),
-(54, 4, 1, 8, 15, 0),
-(55, 4, 1, 11, 24, 0),
-(56, 4, 1, 16, 32, 0);
+(1, 1, 1, 2, 27, 2),
+(2, 1, 1, 34, 13, 34),
+(3, 1, 1, 9, 10, 9),
+(4, 1, 1, 4, 28, 4),
+(5, 1, 1, 5, 7, 5),
+(6, 1, 1, 12, 15, 12),
+(7, 1, 1, 20, 6, 20),
+(8, 1, 1, 30, 33, 30),
+(9, 1, 1, 21, 11, 21),
+(10, 1, 1, 1, 18, 1),
+(11, 1, 1, 8, 25, 8),
+(12, 1, 1, 19, 26, 19),
+(13, 1, 1, 29, 31, 29),
+(14, 1, 1, 23, 14, 23),
+(15, 1, 1, 16, 22, 16),
+(16, 1, 1, 24, 3, 24),
+(17, 2, 1, 23, 24, 23),
+(18, 2, 1, 29, 22, 29),
+(19, 2, 1, 28, 18, 28),
+(20, 2, 1, 15, 10, 15),
+(21, 2, 1, 8, 25, 8),
+(22, 2, 1, 2, 1, 2),
+(23, 2, 1, 4, 19, 4),
+(24, 2, 1, 17, 12, 17),
+(25, 1, 2, 5, 2, 5),
+(26, 1, 2, 1, 21, 1),
+(27, 1, 2, 9, 24, 9),
+(28, 1, 2, 30, 16, 30),
+(29, 1, 2, 29, 8, 29),
+(30, 1, 2, 4, 12, 4),
+(31, 1, 2, 19, 20, 19),
+(32, 1, 2, 34, 23, 34),
+(33, 1, 3, 4, 1, 4),
+(34, 1, 3, 9, 34, 9),
+(35, 1, 3, 19, 30, 19),
+(36, 1, 3, 29, 5, 29),
+(37, 1, 4, 29, 9, 29),
+(38, 1, 4, 4, 19, 4),
+(39, 1, 5, 4, 29, 4),
+(40, 2, 2, 2, 15, 2),
+(41, 2, 2, 4, 29, 4),
+(42, 2, 2, 17, 8, 17),
+(43, 2, 2, 28, 23, 28),
+(44, 2, 3, 17, 2, 17),
+(45, 2, 3, 28, 4, 28),
+(46, 2, 4, 17, 28, 17);
 
 -- --------------------------------------------------------
 
@@ -168,6 +158,26 @@ CREATE TABLE `posts` (
   `content` text COLLATE utf8_unicode_ci NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `winners`
+--
+
+CREATE TABLE `winners` (
+  `winnersId` int(11) NOT NULL,
+  `wedstrijdId` int(11) NOT NULL,
+  `authorId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `winners`
+--
+
+INSERT INTO `winners` (`winnersId`, `wedstrijdId`, `authorId`) VALUES
+(4, 1, 4),
+(18, 2, 17);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -193,6 +203,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `winners`
+--
+ALTER TABLE `winners`
+  ADD PRIMARY KEY (`winnersId`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -206,13 +222,19 @@ ALTER TABLE `authors`
 -- AUTO_INCREMENT voor een tabel `matches`
 --
 ALTER TABLE `matches`
-  MODIFY `matchid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `matchid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT voor een tabel `posts`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT voor een tabel `winners`
+--
+ALTER TABLE `winners`
+  MODIFY `winnersId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
